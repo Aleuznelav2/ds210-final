@@ -95,7 +95,7 @@ fn main(){
     let now = Instant::now();
 
     //let data = Subreddits::read_csv("./reddit_dataset.csv",true);             // I don't want to imagine how long it would take this to compile
-    let data = Subreddits::read_csv("./reddit_dataset_10k.csv",true);         // this took 7 minutes to compile
+    let data = Subreddits::read_csv("./reddit_dataset_10k.csv",true);           // this took 7 minutes to compile
     //let data = Subreddits::read_csv("./reddit_dataset_1k.csv",true);          // condensed set for testing purposes
 
     //convert struct columns to vector
@@ -263,7 +263,7 @@ fn main(){
     for (i, l) in graph.outedges.iter().enumerate() {
         //println!("{} {:?}", i, *l);
         if l.len() >= 5 {
-            println!("{} {:?}", subreddit_list[i].0, *l);
+            //println!("{} {:?}", subreddit_list[i].0, *l);
         }
     }
 
@@ -3061,5 +3061,3 @@ fn main(){
         print!("{:?}, ", subreddit_list[everysinglethread[i]].0);
     }
 }
-
-
