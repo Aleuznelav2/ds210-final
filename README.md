@@ -8,3 +8,5 @@ reddit_dataset.csv is the full dataset
 reddit_dataset_10k.csv is the condensed dataset with the first 10,000 entries that I used
 
 See PDF for the final report
+
+"s" was the initial commit, git bash glitched out
