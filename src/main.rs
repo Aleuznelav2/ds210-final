@@ -259,12 +259,12 @@ fn main(){
     let mut edges: ListOfEdges = subreddit_indexed;
     edges.sort();
     println!("{:?}",edges);
-    let graph = Graph::create_directed(n,&edges);
+    let graph = Graph::create_undirected(n,&edges);
     for (i, l) in graph.outedges.iter().enumerate() {
-        println!("{} {:?}", subreddit_list[i].0, *l);
+        println!("{} {:?}", i, *l);
     }
 
-    let start: Vertex = 0; // start at league of legends
+    let start: Vertex = 113; // start at league of legends
 
     let mut distance: Vec<Option<u32>> = vec![None;graph.n];
     distance[start] = Some(0); // <= we know this distance
@@ -289,7 +289,7 @@ fn main(){
     
     print!("vertex:distance");
     for v in 0..graph.n {
-        print!("{}:{}",v,distance[v].unwrap());
+        print!("    {}:{}",v,distance[v].unwrap());
     }
     println!();
 }
